@@ -1,3 +1,7 @@
+<p align="center">
+   <img alt="Kuma Uptime Plus MQTT" src="Uptime_Kuma_Plus_MQTT.png" />
+</p>
+
 # Uptime Kuma, with a hint of MQTT
 
 I love and use [Uptime Kuma](https://github.com/louislam/uptime-kuma), a beautiful systems monitoring application developed by [Louis Lam](https://github.com/louislam).
