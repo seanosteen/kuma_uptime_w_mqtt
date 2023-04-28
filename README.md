@@ -23,3 +23,5 @@ Once you have your monitors configured you can set up an MQTT publish notificati
    mqtt://<username>:<password>@<broker_endpoint>/<topic>
 ```
 More info on all of the container settings can be found [here](https://github.com/louislam/uptime-kuma#-how-to-install). 
+
+
