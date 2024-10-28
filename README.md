@@ -24,7 +24,7 @@ Once you have your monitors configured you can set up an MQTT publish notificati
 ```
 More info on all of the container settings can be found [here](https://github.com/louislam/uptime-kuma#-how-to-install). 
 
-##Note on Paho-MQTT Library compatibility.
+## Note on Paho-MQTT Library compatibility.
 
 As of Uptime Kuma v. 1.23.15 (October 2024), the Apprise library used in this container is not yet compatible with the version 2.0 ( [breaking changes announcement](https://github.com/caronc/apprise/wiki/Notify_mqtt) ). This Dockerfile has been locked at paho-mqtt==1.6.1 until this issue is resolved.
 
