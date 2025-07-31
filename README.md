@@ -2,31 +2,13 @@
    <img alt="Kuma Uptime Plus MQTT" src="Uptime_Kuma_Plus_MQTT.png" />
 </p>
 
-# Uptime Kuma, with a hint of MQTT
+# DEPRECATED - Uptime Kuma, with a hint of MQTT
 
-I love and use [Uptime Kuma](https://github.com/louislam/uptime-kuma), a beautiful systems monitoring application developed by [Louis Lam](https://github.com/louislam).
-It has all of the bells and whistles needed to monitor a home lab or a small to medium business network. It even has a robust notification system with tons of integrations.
-But in its current form (Q1 2023), container builds do not yet contain the libraries needed to connect to an MQTT broker. That's what this docker image does.
+NOTE: As of July 31, 2025, this container will no longer receive any updates. The codebase will be archived and the hosted docker images will be deleted after December 31, 2025. This is for two reasons:
+1. Uptime Kuma V2 is right around the corner. V2-beta3 is stable and containes the approrpriate Paho-MQTT and Apprise libraries to work using the unaltered image from Louis.
+2. The Uptime Kuma V1.23.16 Debian image, the last stable version of V1, is based on Debian Buster which ended support after June 30, 2025.  No further updates to that base image will be made available, and it already has several high CVE vulnerabilities that need resolution by using the newer version of Debian, like Bookworm.
 
-## Usage
-```
-   docker run -d -v <path_to_your_local_data_folder>:/app/data \
-      --restart=unless-stopped
-      -v /var/run/docker.sock:/var/run/docker.sock \
-      -p 3001:3001 \
-      --name kuma-uptime
-      seanosteen/kuma_uptime_w_mqtt:latest
-```
 
-Once you have your monitors configured you can set up an MQTT publish notification using the Apprise plugin and connecting to your broker with a URL similar to:
-```
-   mqtt://<username>:<password>@<broker_endpoint>/<topic>
-```
-More info on all of the container settings can be found [here](https://github.com/louislam/uptime-kuma#-how-to-install). 
+# RECOMMENDATION
 
-## Note on Paho-MQTT Library compatibility.
-
-UptimeKuma v2.0 is currently in beta and this image was meant to be a bridge for using MQTT notifications in version 1.23. As of Uptime Kuma v2.0 beta3, Apprise 1.9.1 and paho-mqtt v2.1 are already part of the official image from Louis Lam. As a result, This image will be depricated by the end of 2025 or when UptimeKuma 2 stable version is released.
-
-As of Uptime Kuma v. 1.23.15 (October 2024), the Apprise library used in this container is not yet compatible with the version 2.0 ( [breaking changes announcement](https://github.com/caronc/apprise/wiki/Notify_mqtt) ). This Dockerfile has been locked at paho-mqtt==1.6.1 until this issue is resolved.
-
+Even though Uptime Kuma V2 has not yet been released, the beta 3 version is quite stable. I recommend [following these instructions to upgrade your V1 instance to V2-beta3](https://github.com/louislam/uptime-kuma/wiki/Migration-From-v1-To-v2).
