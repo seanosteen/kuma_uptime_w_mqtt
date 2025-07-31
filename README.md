@@ -5,8 +5,8 @@
 # DEPRECATED - Uptime Kuma, with a hint of MQTT
 
 NOTE: As of July 31, 2025, this container will no longer receive any updates. The codebase will be archived and the hosted docker images will be deleted after December 31, 2025. This is for two reasons:
-1. Uptime Kuma V2 is right around the corner. V2-beta3 is stable and containes the approrpriate Paho-MQTT and Apprise libraries to work using the unaltered image from Louis.
-2. The Uptime Kuma V1.23.16 Debian image, the last stable version of V1, is based on Debian Buster which ended support after June 30, 2025.  No further updates to that base image will be made available, and it already has several high CVE vulnerabilities that need resolution by using the newer version of Debian, like Bookworm.
+1. Uptime Kuma V2 is right around the corner. V2-beta3 is stable and contains the approrpriate Paho-MQTT and Apprise libraries to work using the unaltered image from Louis.
+2. The Uptime Kuma V1.23.16 Debian image, the last stable version of V1, is based on Debian Buster which ended support after June 30, 2025.  No further updates to that base image will be made available, and it already has several high CVE vulnerabilities that need resolution by using a newer version of Debian, like Bookworm.
 
 
 # RECOMMENDATION
