@@ -1,4 +1,4 @@
-FROM louislam/uptime-kuma:1.23.16
+FROM louislam/uptime-kuma:1.23.17
 RUN apt update
 RUN apt --yes install python3
 RUN apt-get install python3-setuptools
